@@ -1,0 +1,54 @@
+export const SKILL_CATEGORIES = [
+  {
+    id: "frontend",
+    title: "Frontend",
+    icon: "web",
+    skills: [
+      { label: "HTML", highlighted: false },
+      { label: "CSS", highlighted: false },
+      { label: "JS", highlighted: true },
+      { label: "React", highlighted: true },
+    ],
+    gridSpan: "lg:col-span-7",
+  },
+  {
+    id: "backend",
+    title: "Backend",
+    icon: "terminal",
+    skills: [
+      { label: "PHP", highlighted: false },
+      { label: "Laravel", highlighted: true },
+      { label: "Python", highlighted: true },
+      { label: "FastAPI", highlighted: true },
+    ],
+    gridSpan: "lg:col-span-5",
+  },
+  {
+    id: "databases",
+    title: "Databases",
+    icon: "database",
+    skills: [
+      { label: "MySQL", highlighted: true },
+      { label: "PostgreSQL", highlighted: true },
+      { label: "SQL", highlighted: true },
+    ],
+    gridSpan: "lg:col-span-6",
+  },
+  {
+    id: "tools",
+    title: "Tools & Infra",
+    icon: "build",
+    skills: [
+      { label: "Git", highlighted: true },
+      { label: "Docker", highlighted: true },
+    ],
+    gridSpan: "lg:col-span-6",
+  },
+];
+
+export const FEATURED_TECH_STACK = [
+  { label: "JavaScript", icon: "javascript" },
+  { label: "React", icon: "code" },
+  { label: "Python", icon: "terminal" },
+  { label: "FastAPI", icon: "api" },
+];
