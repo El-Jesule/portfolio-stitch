@@ -5,9 +5,9 @@ import { Textarea } from "../../atoms/Textarea/Textarea.jsx";
 import { Icon } from "../../atoms/Icon/Icon.jsx";
 
 const CONTACT_LINKS = [
-  { icon: "code", label: "github.com/jesus", href: "https://github.com" },
-  { icon: "work", label: "linkedin.com/in/jesus", href: "https://linkedin.com" },
-  { icon: "mail", label: "hola@jesus.dev", href: "mailto:hola@jesus.dev" },
+  { icon: "code", label: "GitHub", href: "https://github.com/El-Jesule" },
+  { icon: "work", label: "LinkedIn", href: "www.linkedin.com/in/jesús-gon-góm" },
+  { icon: "mail", label: "Mail", href: "mailto:gonzalezgomezjesús16061997@gmail.com" },
 ];
 
 export function ContactForm() {
