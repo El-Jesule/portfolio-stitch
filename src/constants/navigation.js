@@ -8,13 +8,13 @@ export const NAVIGATION_ITEMS = [
 ];
 
 export const SOCIAL_LINKS = [
-  { label: "GitHub", href: "https://github.com", id: "github" },
-  { label: "LinkedIn", href: "https://linkedin.com", id: "linkedin" },
-  { label: "Email", href: "mailto:hola@jesus.dev", id: "email" },
+  { label: "GitHub", href: "https://github.com/El-Jesule", id: "github" },
+  { label: "LinkedIn", href: "www.linkedin.com/in/jesús-gon-góm", id: "linkedin" },
+  { label: "Email", href: "mailto:gonzalezgomezjesús16061997@gmail.com", id: "email" },
 ];
 
 export const SITE_META = {
-  ownerName: "Jesús",
+  ownerName: "Jesús González Gómez",
   role: "Full-Stack Developer",
-  copyright: "© 2024 Jesús - Full-Stack Developer",
+  copyright: "© 2026 Jesús - Full-Stack Developer",
 };

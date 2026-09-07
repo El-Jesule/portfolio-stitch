@@ -4,8 +4,8 @@ export const SKILL_CATEGORIES = [
     title: "Frontend",
     icon: "web",
     skills: [
-      { label: "HTML", highlighted: false },
-      { label: "CSS", highlighted: false },
+      { label: "HTML", highlighted: true },
+      { label: "CSS", highlighted: true },
       { label: "JS", highlighted: true },
       { label: "React", highlighted: true },
     ],
@@ -16,7 +16,7 @@ export const SKILL_CATEGORIES = [
     title: "Backend",
     icon: "terminal",
     skills: [
-      { label: "PHP", highlighted: false },
+      { label: "PHP", highlighted: true },
       { label: "Laravel", highlighted: true },
       { label: "Python", highlighted: true },
       { label: "FastAPI", highlighted: true },
