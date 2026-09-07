@@ -1,7 +1,7 @@
 export const EDUCATION_TIMELINE = [
   {
     id: "bootcamp",
-    period: "2023 - 2024",
+    period: "2026",
     title: "Bootcamp Full-Stack Developer",
     description:
       "Programa inmersivo de alto rendimiento enfocado en el ecosistema Python y desarrollo web moderno. Arquitectura de APIs RESTful, diseño de bases de datos relacionales y despliegue continuo.",
@@ -9,11 +9,11 @@ export const EDUCATION_TIMELINE = [
   },
   {
     id: "daw",
-    period: "2021 - 2023",
+    period: "2023 - 2025",
     title: "Desarrollo de Aplicaciones Web (DAW)",
     description:
       "Formación oficial superior centrada en los fundamentos de la programación, estructuras de datos, patrones de diseño y desarrollo web tanto en el lado del cliente como del servidor.",
-    tags: ["Java", "JavaScript", "HTML/CSS", "MySQL", "POO"],
+    tags: ["Java", "JavaScript", "HTML/CSS", "MySQL", "POO", "Docker", "Laravel", "PHP"],
   },
 ];
 
