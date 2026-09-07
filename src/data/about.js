@@ -1,6 +1,5 @@
 export const ABOUT_CONTENT = {
-  image:
-    "https://lh3.googleusercontent.com/aida-public/AB6AXuA5AGZZoddU9S2EGQ0z1MUPA8-jEaxQye24lKo40DhI0Zw0vsUfdpuTJ6AYsOhUAdMF5-4TQja7MCRpXAQH7DApGQNLvx0FDa1sU8PhTzwFgS8TKZ-RIApAJ7Q5Gc4JfZhKS44Jgmn9uPAfFsqDkv4lY7Y4g6F3mrm3duCt9ZigXc3rxkFWj8rbgh1_SJBdUZJF3xgcuI4z9V3gVnQ55pUudKgEQxc8LA53Ee4VZ0lscHviBOS7Cq90qA",
+  image: "/images/myPhoto.png",
   title: "Desarrollador Full-Stack",
   paragraphs: [
     "Hola, soy Jesús. Mi pasión por la tecnología me ha llevado a especializarme en el desarrollo de software completo, dominando tanto el Frontend como el Backend. Disfruto creando interfaces de usuario fluidas y atractivas, respaldadas por arquitecturas robustas y escalables.",

@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "../../atoms/Button/Button.jsx";
 
-const HERO_IMAGE =
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuA5AGZZoddU9S2EGQ0z1MUPA8-jEaxQye24lKo40DhI0Zw0vsUfdpuTJ6AYsOhUAdMF5-4TQja7MCRpXAQH7DApGQNLvx0FDa1sU8PhTzwFgS8TKZ-RIApAJ7Q5Gc4JfZhKS44Jgmn9uPAfFsqDkv4lY7Y4g6F3mrm3duCt9ZigXc3rxkFWj8rbgh1_SJBdUZJF3xgcuI4z9V3gVnQ55pUudKgEQxc8LA53Ee4VZ0lscHviBOS7Cq90qA";
+const HERO_IMAGE = "/images/myPhoto.png";
 
 export function HeroSection() {
   return (
