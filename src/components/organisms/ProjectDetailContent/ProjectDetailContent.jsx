@@ -1,11 +1,16 @@
-import { Link } from "react-router-dom";
-import { PROJECT_DETAIL_MOCK } from "../../../data/projects.js";
+import { Link, useParams } from "react-router-dom";
+import { PROJECTS, PROJECT_DETAILS, PROJECT_DETAIL_MOCK } from "../../../data/projects.js";
 import { Button } from "../../atoms/Button/Button.jsx";
 import { Icon } from "../../atoms/Icon/Icon.jsx";
 import { Badge } from "../../atoms/Badge/Badge.jsx";
 
 export function ProjectDetailContent() {
-  const project = PROJECT_DETAIL_MOCK;
+  const { projectId } = useParams();
+  const baseProject = projectId ? PROJECTS.find((p) => p.id === projectId) : null;
+  const detail = projectId ? PROJECT_DETAILS[projectId] : null;
+  const project = detail ?? PROJECT_DETAIL_MOCK;
+  const githubUrl = baseProject?.githubUrl ?? project.githubUrl ?? "https://github.com";
+  const liveUrl = baseProject?.liveUrl ?? project.liveUrl ?? "#";
 
   return (
     <div className="w-full">
@@ -85,11 +90,11 @@ export function ProjectDetailContent() {
         <div className="md:col-span-4">
           <div className="sticky top-24 flex flex-col gap-8">
             <div className="bg-[#1b1b1e] border border-[#464554] rounded-lg p-6 flex flex-col gap-4">
-              <Button as="a" href="#" target="_blank" rel="noopener noreferrer" fullWidth>
+              <Button as="a" href={liveUrl} target="_blank" rel="noopener noreferrer" fullWidth>
                 Ver proyecto en vivo
                 <Icon name="open_in_new" size="18px" className="ml-2" />
               </Button>
-              <Button variant="secondary" as="a" href="https://github.com" target="_blank" rel="noopener noreferrer" fullWidth>
+              <Button variant="secondary" as="a" href={githubUrl} target="_blank" rel="noopener noreferrer" fullWidth>
                 <Icon name="code" size="18px" className="mr-2" />
                 Repositorio GitHub
               </Button>
@@ -121,26 +126,7 @@ export function ProjectDetailContent() {
         </div>
       </div>
 
-      <section className="border-t border-[#464554] pt-16 mb-12">
-        <h2 className="text-2xl font-semibold text-[#e4e1e5] mb-8">Vistas del Sistema</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {project.gallery.map((img) => (
-            <div
-              key={img}
-              className="aspect-video bg-[#1b1b1e] border border-[#464554] rounded-lg overflow-hidden group"
-            >
-              <img
-                src={img}
-                alt="Vista del sistema"
-                className="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity grayscale group-hover:grayscale-0"
-                loading="lazy"
-              />
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <div className="flex justify-center pb-8">
+      <div className="flex justify-center pt-8 pb-8 border-t border-[#464554] mt-4">
         <Link
           to="/projects"
           className="inline-flex items-center gap-2 text-sm font-medium text-[#e4e1e5] hover:text-[#494bd6] transition-colors"

@@ -24,10 +24,10 @@ export function ProjectCard({ project, variant = "featured" }) {
         )}
       </div>
 
-      <div className="p-6 flex flex-col flex-grow">
-        <h3 className="text-[20px] font-semibold text-[#e4e1e5] mb-2 font-[Geist]">{project.title}</h3>
-        <p className="text-[15px] leading-6 text-[#c7c4d7] mb-6 flex-grow">
-          {isDetailed ? project.description : project.shortDescription}
+      <div className="p-5 flex flex-col flex-grow">
+        <h3 className="text-[18px] font-semibold text-[#e4e1e5] mb-2 font-[Geist] leading-tight">{project.title}</h3>
+        <p className="text-[13px] leading-5 text-[#c7c4d7] mb-5 flex-grow line-clamp-6">
+          {project.shortDescription ?? project.description}
         </p>
 
         <div className="flex flex-wrap gap-2 mb-6">
@@ -40,27 +40,13 @@ export function ProjectCard({ project, variant = "featured" }) {
           <Button as={Link} to={`/projects/${project.id}`} size="sm" className="flex-1 text-center">
             Ver proyecto
           </Button>
-          {isDetailed && project.id !== "microservices-toolkit" && (
+          {isDetailed && (
             <Button
               variant="secondary"
               size="sm"
               className="flex-1"
               as="a"
-              href="https://github.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Icon name="code" size="16px" className="mr-2" />
-              GitHub
-            </Button>
-          )}
-          {isDetailed && project.id === "microservices-toolkit" && (
-            <Button
-              variant="secondary"
-              size="sm"
-              fullWidth
-              as="a"
-              href="https://github.com"
+              href={project.githubUrl ?? "https://github.com"}
               target="_blank"
               rel="noopener noreferrer"
             >
