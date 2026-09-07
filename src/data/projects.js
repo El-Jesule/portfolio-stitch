@@ -1,104 +1,209 @@
 export const PROJECTS = [
   {
-    id: "ecommerce-architecture",
-    title: "E-Commerce Architecture",
-    shortTitle: "SaaS Dashboard",
+    id: "rutas-deportivas",
+    title: "RutasDeportivas",
+    shortTitle: "RutasDeportivas",
     description:
-      "Plataforma de comercio electrónico de alto rendimiento desarrollada con React y Node.js. Implementa pasarela de pagos, gestión de inventario en tiempo real y panel de administración avanzado.",
+      "Aplicación web para planificar y personalizar rutas deportivas sobre mapas interactivos. Calcula distancia, tiempo, calorías, pasos y desnivel según la actividad y el usuario. Incluye cuentas de usuario, rutas guardadas y datos meteorológicos en tiempo real.",
     shortDescription:
-      "Plataforma analítica con visualización de datos en tiempo real.",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuAIK9d6ri6TAIOjmqg4kNZfBvKlpVK1UXnTJtTxNDxXZsytU1sX4nAjHaks0kehJrM2MHBqk84s5o10ZhLK_5mYllZLDJgmeCrMRF9GCtAkiHw_wR8H3DsKpGZg2CoslkDp6HxzWJQsy9vHbcBykbgzawX6hTbvomVBoq3z6KN_yPrSn-jVv7GN2MnqmlxgFI_PnOu9YFdMuy-t1kYWXJir8xQfIBzVTCoxY1N3PP3_0P7f4xu2utXInw",
-    alt: "Dashboard e-commerce moderno en dark mode con métricas técnicas",
-    tags: ["React", "Node.js", "PostgreSQL", "Stripe API"],
+      "Aplicación web para planificar y personalizar rutas deportivas sobre mapas interactivos. Calcula distancia, tiempo, calorías, pasos y desnivel según la actividad y el usuario. Incluye cuentas de usuario, rutas guardadas y datos meteorológicos en tiempo real.",
+    image: "/images/projects/rutas-deportivas.png",
+    alt: "Captura de RutasDeportivas: mapa de Madrid con panel de Configuración y Resultados",
+    tags: ["React", "TypeScript", "Node.js", "Express", "Prisma", "Leaflet"],
     category: "fullstack",
     featured: true,
+    githubUrl: "https://github.com/El-Jesule/RutasDeportivas",
+    liveUrl: "https://rutas-deportivas.vercel.app/",
   },
   {
-    id: "trail-tracker",
-    title: "TrailTracker App",
-    shortTitle: "E-Commerce Headless",
+    id: "okydoky",
+    title: "OkyDoky",
+    shortTitle: "OkyDoky",
     description:
-      "Aplicación web progresiva (PWA) para planificación y seguimiento de rutas deportivas. Integra mapas topográficos, cálculo de desnivel y funcionalidad offline para zonas montañosas.",
+      "Marketplace desarrollado con React que presenta un catálogo de productos consumido desde una API externa. Incluye filtrado por categorías, navegación multipágina, usuarios y contenido editorial de la marca. Cuenta con diseño responsive, gestión de estados asíncronos y arquitectura basada en componentes reutilizables.",
     shortDescription:
-      "Tienda online ultrarrápida con arquitectura headless.",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuB66DTfRmqCZon6aIAUAEFLQ3AlrEvLW1Dk-coOs1V3LWnqQUzkPV79ZqrFnQbd82hSjHF96KqT4K5fUNu--Qy3Cz8NgwiNpOsardhs_csdBnl_9ZoDvN6bCF8w5OMVckzQxM8hLoNn8SymVokXV0JWvGBIVDKQxwk39TVZFGKD3xfgTYQnVWJvGIRYHqH8IN5QooEA4Yl1iyRpvKUh6KGPJM3qL8jz6HLoin4KxhIwF5tLx21l8ae7kA",
-    alt: "Interfaz móvil de app de rutas con mapa topográfico",
-    tags: ["Vue.js", "Python", "Mapbox GL", "PWA"],
+      "Marketplace desarrollado con React que presenta un catálogo de productos consumido desde una API externa. Incluye filtrado por categorías, navegación multipágina, usuarios y contenido editorial de la marca. Cuenta con diseño responsive, gestión de estados asíncronos y arquitectura basada en componentes reutilizables.",
+    image: "/images/projects/okydoky.png",
+    alt: "Captura de OkyDoky: portada neón con OKYDOKY y sección Los 5 más exclusivos",
+    tags: ["React 19", "JavaScript", "Vite", "React Router", "Axios", "ESLint"],
     category: "frontend",
     featured: true,
+    githubUrl: "https://github.com/El-Jesule/tiendaOnlineOkyDoky",
+    liveUrl: "https://tienda-online-okydoky.vercel.app/",
   },
   {
-    id: "findata-dashboard",
-    title: "FinData Analytics Dashboard",
-    shortTitle: "API de Integración",
+    id: "habitafactoria",
+    title: "HabitaFactoría",
+    shortTitle: "HabitaFactoría",
     description:
-      "Sistema de visualización de datos financieros en tiempo real. Procesa grandes volúmenes de datos transaccionales para generar insights visuales interactivos y reportes exportables.",
+      "Portal web de alquiler de viviendas orientado a estudiantes en España. Permite explorar propiedades, consultar sus detalles y contactar con la agencia mediante una interfaz responsive. El proyecto incorpora React, Tailwind CSS, navegación dinámica y un sistema de datos semánticos.",
     shortDescription:
-      "Servicio backend robusto para sincronización de datos empresariales.",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuCZZjIhdDk6eCTFuha_J_a0yrEGh8ofrypEKjwgS9QWeAPL9EGBUo3mFKudgP0tK77T0rvtn6ZHtAPFtFVWlJAuS6OC60P--rtWyabz9q-ns1-AAMinI_wVr4zb6RLb3Z9A_JgwBgHJn_FFb2--KOEzt6GHmt6YBsqFpSn1wa7NznlY9XRAFetatpn4C-oEhuwR1IKrWdWlFsfKAru7SjeVGrjiwO0FxEp6H8MrrwNyQSlLlTdR7vSnmQ",
-    alt: "Dashboard financiero con gráficos minimalistas en dark mode",
-    tags: ["React", "D3.js", "Go", "Redis"],
-    category: "backend",
+      "Portal web de alquiler de viviendas orientado a estudiantes en España. Permite explorar propiedades, consultar sus detalles y contactar con la agencia mediante una interfaz responsive. El proyecto incorpora React, Tailwind CSS, navegación dinámica y un sistema de datos semánticos.",
+    image: "/images/projects/habitafactoria.png",
+    alt: "Captura de HabitaFactoría: hero azul con mano entregando llaves y texto Gastos Incluidos",
+    tags: ["React 19", "JavaScript", "Vite", "Tailwind CSS", "React Router", "Axios"],
+    category: "fullstack",
     featured: true,
-  },
-  {
-    id: "microservices-toolkit",
-    title: "Microservices Toolkit",
-    shortTitle: "Microservices Toolkit",
-    description:
-      "Colección de utilidades y patrones para arquitecturas de microservicios. Incluye descubrimiento de servicios, trazabilidad distribuida y resiliencia de red.",
-    shortDescription:
-      "Colección de utilidades para arquitecturas de microservicios.",
-    image: null,
-    icon: "hub",
-    tags: ["Docker", "Kubernetes", "Rust"],
-    category: "infra",
-    featured: false,
+    githubUrl: "https://github.com/El-Jesule/La-Inmobiliaria",
+    liveUrl: "https://habitafactoria.vercel.app/",
   },
 ];
 
 export const FEATURED_PROJECTS = PROJECTS.filter((project) => project.featured);
 
 export const PROJECT_DETAIL_MOCK = {
-  id: "distributed-architecture",
-  title: "Sistema de Arquitectura Distribuida para Gestión de Datos a Gran Escala",
+  id: "rutas-deportivas",
+  title: "RutasDeportivas",
   summary:
-    "Un rediseño completo de la infraestructura core enfocado en alta disponibilidad, reducción de latencia y procesamiento en tiempo real utilizando microservicios.",
-  heroImage:
-    "https://lh3.googleusercontent.com/aida-public/AB6AXuBAGxO14YTG9nXYfA6yllOZpAnEThXn04iGXKleFfn7PO9hO4kaOYZIHYkLmWjqVbLYeVF6ME1b996q2OEvcr1YBIWTra5ykhVbFxXl3NeftIwvyy4_dGieqUJj_qIhJaedue0xrPB2GWMbUOm-Gosod3YLoqoR77CVOOqHaS1utsSn4l9aQ3HKXggxS7rSEduPD4Lqn6if-xwmtyeSp0JnoI5W0el1f67lrqn5i6Y1mjxpebJvUHospQ",
+    "Aplicación web para planificar y personalizar rutas deportivas sobre mapas interactivos. Calcula distancia, tiempo, calorías, pasos y desnivel según actividad y usuario.",
+  heroImage: "/images/projects/rutas-deportivas.png",
+  liveUrl: "https://rutas-deportivas.vercel.app/",
+  githubUrl: "https://github.com/El-Jesule/RutasDeportivas",
   descriptionParagraphs: [
-    "Este proyecto nació de la necesidad crítica de modernizar un monolito heredado que ya no soportaba la carga de usuarios concurrentes. El objetivo principal era diseñar una solución que no solo resolviera los cuellos de botella actuales, sino que estableciera una base técnica sólida para el crecimiento futuro.",
-    "Se implementó un enfoque de Domain-Driven Design (DDD) para separar lógicamente los contextos y permitir que los equipos trabajaran de forma autónoma en diferentes servicios.",
+    "RutasDeportivas es una aplicación web orientada a la planificación de actividades deportivas al aire libre. Permite crear rutas directamente sobre un mapa y obtener información detallada del recorrido.",
+    "El sistema calcula distancia, tiempo estimado, calorías, pasos y desnivel. También incorpora información meteorológica para los puntos de la ruta. Los usuarios pueden registrarse, gestionar su perfil y guardar sus rutas favoritas. La aplicación combina un frontend interactivo con una API REST y una base de datos. Se integraron diferentes servicios externos para mapas, rutas, geolocalización, elevación y meteorología. El proyecto fue desarrollado como Trabajo de Fin de Grado de Desarrollo de Aplicaciones Web.",
   ],
   problem:
-    "Tiempos de respuesta superiores a 3 segundos en endpoints críticos, caídas frecuentes durante picos de tráfico y una deuda técnica que impedía despliegues rápidos.",
+    "Planificar una ruta deportiva puede requerir consultar diferentes herramientas para conocer su recorrido, distancia, desnivel, duración y condiciones meteorológicas. Esta dispersión de información dificulta preparar una actividad de forma rápida y personalizada.",
   solution:
-    "Migración a una arquitectura de microservicios en Kubernetes, implementación de Redis para caché de sesión y Kafka para eventos asíncronos.",
+    "RutasDeportivas centraliza toda esta información en una única aplicación. El usuario puede diseñar el recorrido sobre el mapa y obtener automáticamente las principales estadísticas necesarias para valorar y preparar la actividad.",
   timeline: [
     {
-      label: "Fase 1: Análisis y Desacoplamiento",
-      description:
-        'El mayor desafío fue identificar los "seams" lógicos en el código existente sin interrumpir el servicio en producción. Se utilizó el patrón Strangler Fig para migrar progresivamente.',
+      label: "Análisis y definición de funcionalidades",
+      description: "Análisis de los requisitos y definición de las funcionalidades principales.",
     },
     {
-      label: "Fase 2: Infraestructura y CI/CD",
+      label: "Arquitectura y mapas",
+      description: "Diseño de la arquitectura frontend/backend e integración de mapas y servicios externos.",
+    },
+    {
+      label: "Usuarios y cálculos",
       description:
-        "Configuración de pipelines automatizados con GitHub Actions y Terraform para infraestructura como código, asegurando entornos reproducibles.",
+        "Desarrollo del sistema de usuarios y persistencia de rutas, implementación de los cálculos y visualización de estadísticas.",
+    },
+    {
+      label: "Pruebas y UX",
+      description: "Pruebas y ajustes de la experiencia de usuario.",
     },
   ],
-  techStack: ["TypeScript", "Node.js", "React", "PostgreSQL", "Docker", "AWS"],
+  techStack: ["React", "TypeScript", "Node.js", "Express", "Prisma", "Leaflet"],
   features: [
-    "Autenticación JWT con rotación de tokens",
-    "Procesamiento de colas asíncronas",
-    "Dashboards analíticos en tiempo real",
+    "Creación de rutas sobre mapas interactivos",
+    "Cálculo de distancia y tiempo estimado",
+    "Estimación de calorías y pasos",
+    "Perfil y análisis de elevación",
+    "Información meteorológica en tiempo real",
+    "Registro, autenticación y gestión de usuarios",
+    "Guardado y recuperación de rutas",
+    "Buscador de direcciones",
+    "Modo oscuro",
+    "Marcadores de ruta arrastrables",
   ],
-  gallery: [
-    "https://lh3.googleusercontent.com/aida-public/AB6AXuA4FvS9jSgQ_y--am_7sQA5nw0JYT3NnQZ1OOVRIqocB4LYf2xMKn_GiBqWxcLanfX8_7iVHiRmgHRe3zkI6rv44LGH5DaxZURv0rdr7rcLwX19SOXlAhblb_gfK1keXruQG8mbdmlUgnKsLJ7t3vGjSJsI6mMULx10yB_SY7bcJA5Y_2L1CQ9gv-vqToyT3sE-ddWMoIlHSRpl9v8lWxXCTR_73lyvoYSkAyeO_FQvNyVxI5tD_pvf5A",
-    "https://lh3.googleusercontent.com/aida-public/AB6AXuAFxV9tf1JxD6ZrTu57UD2--Bo5Q_VcBYxLdjXNxKowff0qsTYw1UwaWtu-Cyn-I3_5sf7-knPDftqYnC06h9si-3G8FPxT9TpsNtFHM3XRULf40B7ZoMQutmRun16jWRXpOnepOoQoFcg4eFEHEdbeqkUnzcRWoRSKrUIzzfJIopg6OBkv2-5-zdTsPohUxyJ0YQzVBxis7LUwVAgxnzJNgtAUhtuMYYOz3uRIM-y9nnnll8uYZqGL4Q",
-  ],
+  gallery: ["/images/projects/okydoky.png", "/images/projects/habitafactoria.png"],
+};
+
+export const PROJECT_DETAILS = {
+  "rutas-deportivas": PROJECT_DETAIL_MOCK,
+  okydoky: {
+    id: "okydoky",
+    title: "OkyDoky",
+    summary:
+      "Marketplace desarrollado con React que presenta un catálogo de productos consumido desde una API externa, con filtrado por categorías y arquitectura basada en componentes reutilizables.",
+    heroImage: "/images/projects/okydoky.png",
+    liveUrl: "https://tienda-online-okydoky.vercel.app/",
+    githubUrl: "https://github.com/El-Jesule/tiendaOnlineOkyDoky",
+    descriptionParagraphs: [
+      "OKYDOKY es una SPA desarrollada durante el bootcamp con una identidad visual inspirada en la estética cyberpunk. La aplicación obtiene productos desde una API externa y los presenta mediante un catálogo interactivo.",
+      "Los usuarios pueden filtrar los productos por categorías y consultar diferentes secciones de la marca. La interfaz utiliza componentes reutilizables para mantener una experiencia consistente. La navegación se gestiona mediante React Router y un layout compartido. Las peticiones HTTP están centralizadas mediante Axios y cuentan con gestión de estados de carga y error. También incorpora perfiles de usuarios, información sobre el equipo y una sección dedicada a la historia de la marca. Como funcionalidad adicional, incluye un widget meteorológico basado en geolocalización. El proyecto incorpora además tests unitarios y de integración.",
+    ],
+    problem:
+      "Un catálogo online necesita presentar una cantidad variable de información procedente de una fuente externa sin sacrificar la claridad de navegación ni la experiencia del usuario.",
+    solution:
+      "OKYDOKY organiza los productos en un catálogo dinámico con filtrado por categorías, componentes reutilizables y estados de carga y error. La arquitectura permite separar la obtención de datos, la lógica y la presentación para facilitar el mantenimiento.",
+    timeline: [
+      {
+        label: "Identidad y estructura",
+        description: "Definición de la identidad visual y estructura del marketplace. Organización de la aplicación mediante componentes reutilizables.",
+      },
+      {
+        label: "Catálogo y navegación",
+        description: "Integración de la API externa de productos. Implementación de navegación y filtrado.",
+      },
+      {
+        label: "Estados y páginas informativas",
+        description:
+          "Gestión de estados de carga y errores. Desarrollo de páginas informativas y elementos adicionales.",
+      },
+      {
+        label: "Pruebas",
+        description: "Incorporación de pruebas para componentes, servicios y rutas.",
+      },
+    ],
+    techStack: ["React 19", "JavaScript", "Vite", "React Router", "Axios", "ESLint"],
+    features: [
+      "Catálogo de productos dinámico",
+      "Filtrado por categorías",
+      "Selección de productos destacados",
+      "Perfiles de usuarios",
+      "Página de historia de la marca",
+      "Página del equipo",
+      "Widget meteorológico opcional",
+      "Gestión de estados de carga y error",
+      "Diseño responsive",
+      "Tests unitarios y de integración",
+    ],
+    gallery: ["/images/projects/rutas-deportivas.png", "/images/projects/habitafactoria.png"],
+  },
+  habitafactoria: {
+    id: "habitafactoria",
+    title: "HabitaFactoría",
+    summary:
+      "Portal web de alquiler de viviendas orientado a estudiantes en España, con catálogo de propiedades, fichas detalladas y contacto con la agencia.",
+    heroImage: "/images/projects/habitafactoria.png",
+    liveUrl: "https://habitafactoria.vercel.app/",
+    githubUrl: "https://github.com/El-Jesule/La-Inmobiliaria",
+    descriptionParagraphs: [
+      "HabitaFactoría es un prototipo de portal inmobiliario orientado al alquiler de viviendas para estudiantes. La aplicación permite consultar un catálogo de propiedades y acceder a fichas detalladas de cada vivienda. Incluye información sobre precios, características, agentes y condiciones de las propiedades.",
+      "También incorpora páginas informativas sobre la agencia y su equipo. La interfaz está diseñada para adaptarse a diferentes tamaños de pantalla. El proyecto utiliza React y React Router para estructurar la aplicación y su navegación. Los datos inmobiliarios se gestionan actualmente mediante fixtures locales. Además, incorpora una pequeña aplicación de restaurante conectada a TheMealDB como funcionalidad adicional. El proyecto fue desarrollado siguiendo un sistema de diseño basado en tokens y una estructura semántica de componentes.",
+    ],
+    problem:
+      "Los estudiantes que buscan alojamiento necesitan comparar rápidamente diferentes propiedades y disponer de información clara sobre precios, características y condiciones antes de contactar con una agencia.",
+    solution:
+      "HabitaFactoría propone una plataforma centralizada donde consultar propiedades, revisar sus características y contactar con la agencia desde una interfaz sencilla y responsive.",
+    timeline: [
+      {
+        label: "Estructura y diseño",
+        description: "Definición de la estructura y necesidades principales del portal. Diseño de la interfaz y sistema visual.",
+      },
+      {
+        label: "Componentes y catálogo",
+        description:
+          "Creación de componentes reutilizables. Implementación del catálogo de propiedades y fichas individuales.",
+      },
+      {
+        label: "Navegación y contacto",
+        description: "Desarrollo de navegación responsive. Implementación del formulario de contacto.",
+      },
+      {
+        label: "Funcionalidad adicional",
+        description: "Integración de la aplicación complementaria de restaurante.",
+      },
+    ],
+    techStack: ["React 19", "JavaScript", "Vite", "Tailwind CSS", "React Router", "Axios"],
+    features: [
+      "Catálogo de propiedades",
+      "Búsqueda y listado de viviendas",
+      "Fichas detalladas de propiedades",
+      "Información de agentes y agencia",
+      "Formulario de contacto",
+      "Diseño responsive",
+      "Mini-app de restaurante",
+      "Carrito de pedidos",
+      "Estados de carga, error y vacío",
+      "Sistema de diseño mediante tokens",
+    ],
+    gallery: ["/images/projects/rutas-deportivas.png", "/images/projects/okydoky.png"],
+  },
 };
 
 export const PROJECT_CATEGORIES = [
