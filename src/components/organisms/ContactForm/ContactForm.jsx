@@ -18,17 +18,17 @@ export function ContactForm() {
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mt-12">
       <div className="lg:col-span-5 flex flex-col gap-8">
         <div>
-          <h1 className="text-4xl md:text-5xl font-bold text-[#e4e1e5] mb-6 leading-tight">
-            Iniciemos una <span className="text-[#6366f1]">conversación.</span>
+          <h1 className="text-4xl md:text-5xl font-bold text-on-surface mb-6 leading-tight">
+            Iniciemos una <span className="text-accent light:text-inverse-primary">conversación.</span>
           </h1>
-          <p className="text-lg leading-6 text-[#c7c4d7] max-w-md">
+          <p className="text-lg leading-6 text-on-surface-variant max-w-md">
             ¿Tienes un proyecto en mente, una oportunidad de colaboración, o simplemente quieres charlar
             sobre desarrollo web y tecnología? Envíame un mensaje.
           </p>
         </div>
 
         <div className="flex flex-col gap-4 mt-4">
-          <h3 className="text-xl font-semibold text-[#e4e1e5]">Conecta conmigo</h3>
+          <h3 className="text-xl font-semibold text-on-surface">Conecta conmigo</h3>
           <div className="flex flex-col gap-4">
             {CONTACT_LINKS.map((link) => (
               <a
@@ -36,7 +36,7 @@ export function ContactForm() {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 text-[#c7c4d7] hover:text-[#6366f1] transition-colors group"
+                className="flex items-center gap-3 text-on-surface-variant hover:text-accent transition-colors group"
               >
                 <Icon name={link.icon} />
                 <span className="font-mono text-sm group-hover:underline">{link.label}</span>
@@ -47,8 +47,8 @@ export function ContactForm() {
       </div>
 
       <div className="lg:col-span-7">
-        <div className="bg-[#161618] border border-[#27272a] rounded-lg p-6 relative overflow-hidden">
-          <div className="absolute bottom-0 right-0 w-64 h-64 bg-[#6366f1] opacity-5 blur-[100px] pointer-events-none" />
+        <div className="bg-surface-container-low border border-border-subtle rounded-lg p-6 relative overflow-hidden shadow-theme-card">
+          <div className="absolute bottom-0 right-0 w-64 h-64 bg-accent opacity-5 light:opacity-[0.08] blur-[100px] pointer-events-none" />
           <form onSubmit={handleSubmit} className="flex flex-col gap-6 relative z-10" noValidate>
             <div className="flex flex-col md:flex-row gap-6">
               <div className="flex-1">
@@ -94,7 +94,7 @@ export function ContactForm() {
             />
 
             <div className="pt-4 flex items-center justify-between">
-              <span className="font-mono text-xs text-[#c7c4d7] opacity-50">{status}</span>
+              <span className="font-mono text-xs text-on-surface-variant opacity-50">{status}</span>
               <Button
                 type="submit"
                 disabled={isSubmitting}

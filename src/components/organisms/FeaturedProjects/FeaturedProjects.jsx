@@ -6,10 +6,10 @@ export function FeaturedProjects() {
   return (
     <section className="max-w-[1200px] mx-auto px-6 md:px-12 py-24" id="featured-projects">
       <div className="flex justify-between items-end mb-12">
-        <h3 className="text-2xl md:text-[32px] font-semibold text-[#e4e1e5]">Proyectos Destacados</h3>
+        <h3 className="text-2xl md:text-[32px] font-semibold text-on-surface">Proyectos Destacados</h3>
         <Link
           to="/projects"
-          className="text-[#c7c4d7] hover:text-[#6366f1] text-sm font-medium hidden md:inline-block transition-colors"
+          className="text-on-surface-variant hover:text-accent text-sm font-medium hidden md:inline-block transition-colors"
         >
           Ver todos los proyectos →
         </Link>
@@ -22,7 +22,7 @@ export function FeaturedProjects() {
       </div>
 
       <div className="text-center mt-8 md:hidden">
-        <Link to="/projects" className="text-[#c7c4d7] hover:text-[#6366f1] text-sm transition-colors">
+        <Link to="/projects" className="text-on-surface-variant hover:text-accent text-sm transition-colors">
           Ver todos los proyectos →
         </Link>
       </div>

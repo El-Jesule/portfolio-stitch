@@ -3,8 +3,8 @@ import { ProjectCard } from "../../molecules/ProjectCard/ProjectCard.jsx";
 export function ProjectsGrid({ projects }) {
   if (projects.length === 0) {
     return (
-      <div className="text-center py-16 border border-dashed border-[#27272a] rounded-lg">
-        <p className="text-[#c7c4d7]">No se encontraron proyectos para esta categoría.</p>
+      <div className="text-center py-16 border border-dashed border-border-subtle rounded-lg bg-surface-container-low">
+        <p className="text-on-surface-variant">No se encontraron proyectos para esta categoría.</p>
       </div>
     );
   }
