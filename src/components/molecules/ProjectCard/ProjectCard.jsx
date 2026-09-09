@@ -7,8 +7,8 @@ export function ProjectCard({ project, variant = "featured" }) {
   const isDetailed = variant === "detailed";
 
   return (
-    <article className="bg-[#161618] border border-[#27272a] rounded-xl overflow-hidden flex flex-col h-full group hover:border-[#6366f1] transition-colors duration-300">
-      <div className="aspect-video w-full overflow-hidden relative border-b border-[#27272a] bg-[#1b1b1e] flex items-center justify-center">
+    <article className="bg-surface-container-low border border-border-subtle rounded-xl overflow-hidden flex flex-col h-full group hover:border-accent transition-colors duration-300 shadow-theme-card">
+      <div className="aspect-video w-full overflow-hidden relative border-b border-border-subtle bg-surface-low flex items-center justify-center">
         {project.image ? (
           <img
             src={project.image}
@@ -18,15 +18,15 @@ export function ProjectCard({ project, variant = "featured" }) {
           />
         ) : (
           <>
-            <Icon name={project.icon ?? "hub"} size="48px" className="text-[#908fa0] opacity-50" />
+            <Icon name={project.icon ?? "hub"} size="48px" className="text-outline opacity-50" />
             <div className="absolute inset-0 bg-gradient-to-br from-transparent to-[rgba(99,102,241,0.05)] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
           </>
         )}
       </div>
 
       <div className="p-5 flex flex-col flex-grow">
-        <h3 className="text-[18px] font-semibold text-[#e4e1e5] mb-2 font-[Geist] leading-tight">{project.title}</h3>
-        <p className="text-[13px] leading-5 text-[#c7c4d7] mb-5 flex-grow line-clamp-6">
+        <h3 className="text-[18px] font-semibold text-on-surface mb-2 font-display leading-tight">{project.title}</h3>
+        <p className="text-[13px] leading-5 text-on-surface-variant mb-5 flex-grow line-clamp-6">
           {project.shortDescription ?? project.description}
         </p>
 

@@ -5,7 +5,7 @@ export function NavLink({ to, children }) {
     <RouterNavLink
       to={to}
       className={({ isActive }) =>
-        `text-sm font-medium tracking-wide transition-colors duration-200 ${isActive ? "text-[#c0c1ff] border-b-2 border-[#c0c1ff] pb-1" : "text-[#c7c4d7] hover:text-[#c0c1ff]"}`
+        `text-sm font-medium tracking-wide transition-colors duration-200 ${isActive ? "text-primary border-b-2 border-primary pb-1" : "text-on-surface-variant hover:text-primary"}`
       }
     >
       {children}
