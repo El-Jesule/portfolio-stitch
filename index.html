@@ -1,17 +1,24 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>portfolio-stitch</title>
+    <meta
+      name="description"
+      content="Jesús González Gómez — Desarrollador Full-Stack. Proyectos, formación, stack técnico y contacto."
+    />
+    <title>Jesús González Gómez — Full-Stack Developer</title>
     <script>
       try {
-        var t = localStorage.getItem("portfolio-theme");
-        if (!t) t = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
-        if (t === "light") document.documentElement.classList.add("light");
-        document.documentElement.style.colorScheme = t;
-      } catch (e) {}
+        const storedTheme = localStorage.getItem("portfolio-theme");
+        const prefersLightTheme = window.matchMedia("(prefers-color-scheme: light)").matches;
+        const initialTheme = storedTheme === "light" || storedTheme === "dark" ? storedTheme : prefersLightTheme ? "light" : "dark";
+        if (initialTheme === "light") document.documentElement.classList.add("light");
+        document.documentElement.style.colorScheme = initialTheme;
+      } catch (error) {
+        document.documentElement.style.colorScheme = "dark";
+      }
     </script>
   </head>
   <body>
