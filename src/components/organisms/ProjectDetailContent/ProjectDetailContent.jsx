@@ -1,16 +1,21 @@
 import { Link, useParams } from "react-router-dom";
-import { PROJECTS, PROJECT_DETAILS, PROJECT_DETAIL_MOCK } from "../../../data/projects.js";
+import { PROJECTS, PROJECT_DETAILS, FALLBACK_PROJECT_DETAIL } from "../../../data/projects.js";
 import { Button } from "../../atoms/Button/Button.jsx";
 import { Icon } from "../../atoms/Icon/Icon.jsx";
 import { Badge } from "../../atoms/Badge/Badge.jsx";
+
+function truncateTitle(title, maxLength = 30) {
+  if (title.length <= maxLength) return title;
+  return `${title.slice(0, maxLength)}…`;
+}
 
 export function ProjectDetailContent() {
   const { projectId } = useParams();
   const baseProject = projectId ? PROJECTS.find((p) => p.id === projectId) : null;
   const detail = projectId ? PROJECT_DETAILS[projectId] : null;
-  const project = detail ?? PROJECT_DETAIL_MOCK;
-  const githubUrl = baseProject?.githubUrl ?? project.githubUrl ?? "https://github.com";
-  const liveUrl = baseProject?.liveUrl ?? project.liveUrl ?? "#";
+  const project = detail ?? FALLBACK_PROJECT_DETAIL;
+  const githubUrl = baseProject?.githubUrl ?? project.githubUrl;
+  const liveUrl = baseProject?.liveUrl ?? project.liveUrl;
 
   return (
     <div className="w-full">
@@ -23,7 +28,7 @@ export function ProjectDetailContent() {
           Proyectos
         </Link>
         <Icon name="chevron_right" size="16px" />
-        <span className="text-on-surface truncate">{project.title.slice(0, 30)}…</span>
+        <span className="text-on-surface truncate">{truncateTitle(project.title)}</span>
       </nav>
 
       <header className="mb-16">
@@ -45,8 +50,8 @@ export function ProjectDetailContent() {
           <section>
             <h2 className="text-2xl font-semibold text-on-surface mb-6">Descripción General</h2>
             <div className="space-y-4 text-on-surface-variant leading-6">
-              {project.descriptionParagraphs.map((p) => (
-                <p key={p.slice(0, 20)}>{p}</p>
+              {project.descriptionParagraphs.map((paragraph, index) => (
+                <p key={`${project.id}-description-${index}`}>{paragraph}</p>
               ))}
             </div>
           </section>
@@ -77,7 +82,7 @@ export function ProjectDetailContent() {
             <h2 className="text-2xl font-semibold text-on-surface mb-6">Proceso y Desafíos</h2>
             <div className="relative pl-6 border-l-2 border-outline-variant space-y-8">
               {project.timeline.map((item) => (
-                <div key={item.label} className="relative">
+                <div key={`${project.id}-${item.label}`} className="relative">
                   <div className="absolute -left-[31px] top-1 w-3 h-3 bg-bg-canvas border-2 border-inverse-primary rounded-full" />
                   <span className="font-mono text-sm text-on-surface-variant mb-2 block">{item.label}</span>
                   <p className="text-sm leading-6 text-on-surface-variant">{item.description}</p>
@@ -90,14 +95,18 @@ export function ProjectDetailContent() {
         <div className="md:col-span-4">
           <div className="sticky top-24 flex flex-col gap-8">
             <div className="bg-surface-low border border-outline-variant rounded-lg p-6 flex flex-col gap-4 shadow-theme-card">
-              <Button as="a" href={liveUrl} target="_blank" rel="noopener noreferrer" fullWidth>
-                Ver proyecto en vivo
-                <Icon name="open_in_new" size="18px" className="ml-2" />
-              </Button>
-              <Button variant="secondary" as="a" href={githubUrl} target="_blank" rel="noopener noreferrer" fullWidth>
-                <Icon name="code" size="18px" className="mr-2" />
-                Repositorio GitHub
-              </Button>
+              {liveUrl && (
+                <Button as="a" href={liveUrl} target="_blank" rel="noopener noreferrer" fullWidth>
+                  Ver proyecto en vivo
+                  <Icon name="open_in_new" size="18px" className="ml-2" />
+                </Button>
+              )}
+              {githubUrl && (
+                <Button variant="secondary" as="a" href={githubUrl} target="_blank" rel="noopener noreferrer" fullWidth>
+                  <Icon name="code" size="18px" className="mr-2" />
+                  Repositorio GitHub
+                </Button>
+              )}
             </div>
 
             <div className="bg-surface-low border border-outline-variant rounded-lg p-6 shadow-theme-card">
@@ -115,7 +124,7 @@ export function ProjectDetailContent() {
               <h3 className="font-semibold text-on-surface mb-4">Features Clave</h3>
               <ul className="space-y-3">
                 {project.features.map((feature) => (
-                  <li key={feature} className="flex items-start gap-3">
+                  <li key={`${project.id}-${feature}`} className="flex items-start gap-3">
                     <Icon name="check_circle" size="20px" className="text-inverse-primary mt-0.5" />
                     <span className="text-sm leading-5 text-on-surface-variant">{feature}</span>
                   </li>

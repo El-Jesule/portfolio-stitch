@@ -26,8 +26,8 @@ export function AboutDetail() {
         </div>
 
         <div className="flex flex-col gap-4 leading-relaxed text-on-surface-variant">
-          {ABOUT_CONTENT.paragraphs.map((paragraph) => (
-            <p key={paragraph.slice(0, 20)}>{paragraph}</p>
+          {ABOUT_CONTENT.paragraphs.map((paragraph, index) => (
+            <p key={`about-paragraph-${index}`}>{paragraph}</p>
           ))}
         </div>
 

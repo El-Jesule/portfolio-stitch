@@ -4,6 +4,7 @@ import { PROJECTS, PROJECT_CATEGORIES } from "../../data/projects.js";
 import { ProjectsGrid } from "../../components/organisms/ProjectsGrid/ProjectsGrid.jsx";
 import { FilterChip } from "../../components/molecules/FilterChip/FilterChip.jsx";
 import { Button } from "../../components/atoms/Button/Button.jsx";
+import { Card } from "../../components/atoms/Card/Card.jsx";
 
 export function ProjectsPage() {
   const [activeFilter, setActiveFilter] = useState("all");
@@ -39,7 +40,7 @@ export function ProjectsPage() {
 
       <ProjectsGrid projects={filteredProjects} />
 
-      <section className="border border-border-subtle rounded-lg p-12 bg-surface-container-low text-center max-w-3xl mx-auto w-full shadow-theme-card">
+      <Card as="section" className="rounded-lg p-12 text-center max-w-3xl mx-auto w-full">
         <h2 className="text-2xl font-semibold text-on-surface mb-4">¿Interesado en colaborar?</h2>
         <p className="text-base leading-6 text-on-surface-variant mb-8 max-w-lg mx-auto">
           Siempre estoy abierto a discutir nuevos proyectos, ideas de arquitectura de software u
@@ -48,7 +49,7 @@ export function ProjectsPage() {
         <Button as={Link} to="/contact">
           Contactar ahora
         </Button>
-      </section>
+      </Card>
     </div>
   );
 }

@@ -1,17 +1,13 @@
 import { useContactForm } from "../../../hooks/useContactForm.js";
+import { CONTACT_LINKS } from "../../../constants/navigation.js";
 import { Button } from "../../atoms/Button/Button.jsx";
+import { Card } from "../../atoms/Card/Card.jsx";
 import { Input } from "../../atoms/Input/Input.jsx";
 import { Textarea } from "../../atoms/Textarea/Textarea.jsx";
 import { Icon } from "../../atoms/Icon/Icon.jsx";
 
-const CONTACT_LINKS = [
-  { icon: "code", label: "GitHub", href: "https://github.com/El-Jesule" },
-  { icon: "work", label: "LinkedIn", href: "www.linkedin.com/in/jesús-gon-góm" },
-  { icon: "mail", label: "Mail", href: "mailto:gonzalezgomezjesús16061997@gmail.com" },
-];
-
 export function ContactForm() {
-  const { formData, status, isSubmitting, isSuccess, handleChange, handleFocus, handleBlur, handleSubmit } =
+  const { formData, status, isSubmitting, isSuccess, handleChange, handleSubmit } =
     useContactForm();
 
   return (
@@ -47,7 +43,7 @@ export function ContactForm() {
       </div>
 
       <div className="lg:col-span-7">
-        <div className="bg-surface-container-low border border-border-subtle rounded-lg p-6 relative overflow-hidden shadow-theme-card">
+        <Card className="rounded-lg p-6 relative overflow-hidden">
           <div className="absolute bottom-0 right-0 w-64 h-64 bg-accent opacity-5 light:opacity-[0.08] blur-[100px] pointer-events-none" />
           <form onSubmit={handleSubmit} className="flex flex-col gap-6 relative z-10" noValidate>
             <div className="flex flex-col md:flex-row gap-6">
@@ -60,8 +56,6 @@ export function ContactForm() {
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  onFocus={() => handleFocus("name")}
-                  onBlur={handleBlur}
                 />
               </div>
               <div className="flex-1">
@@ -74,8 +68,6 @@ export function ContactForm() {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  onFocus={() => handleFocus("email")}
-                  onBlur={handleBlur}
                 />
               </div>
             </div>
@@ -89,8 +81,6 @@ export function ContactForm() {
               rows={5}
               value={formData.message}
               onChange={handleChange}
-              onFocus={() => handleFocus("message")}
-              onBlur={handleBlur}
             />
 
             <div className="pt-4 flex items-center justify-between">
@@ -100,11 +90,11 @@ export function ContactForm() {
                 disabled={isSubmitting}
                 className={isSuccess ? "bg-emerald-600 hover:bg-emerald-700 border-emerald-600" : ""}
               >
-                {isSubmitting ? "Enviando..." : isSuccess ? "Mensaje Enviado" : "Enviar mensaje"}
+                {isSubmitting ? "Enviando..." : isSuccess ? "Mensaje enviado" : "Enviar mensaje"}
               </Button>
             </div>
           </form>
-        </div>
+        </Card>
       </div>
     </div>
   );

@@ -1,4 +1,5 @@
 import { CURRENT_LEARNING } from "../../../data/education.js";
+import { Card } from "../../atoms/Card/Card.jsx";
 import { Icon } from "../../atoms/Icon/Icon.jsx";
 
 export function LearningGrid() {
@@ -9,9 +10,9 @@ export function LearningGrid() {
       </h2>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {CURRENT_LEARNING.map((item) => (
-          <div
+          <Card
             key={item.label}
-            className="bg-surface-container-low border border-border-subtle p-6 rounded-lg flex flex-col items-center justify-center gap-4 group hover:border-accent transition-colors shadow-theme-card"
+            className="p-6 rounded-lg flex flex-col items-center justify-center gap-4 group hover:border-accent transition-colors"
           >
             <Icon
               name={item.icon}
@@ -19,7 +20,7 @@ export function LearningGrid() {
               className="text-on-surface-variant group-hover:text-accent transition-colors"
             />
             <span className="text-sm font-medium text-on-surface">{item.label}</span>
-          </div>
+          </Card>
         ))}
       </div>
     </section>

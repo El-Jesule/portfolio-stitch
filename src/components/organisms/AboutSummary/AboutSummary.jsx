@@ -25,7 +25,7 @@ export function AboutSummary() {
             {FEATURED_TECH_STACK.map((tech) => (
               <div
                 key={tech.label}
-                className="border border-border-subtle p-6 flex flex-col items-center justify-center gap-3 bg-bg-canvas hover:bg-surface-container-low hover:border-accent rounded-xl transition-colors duration-300 light:bg-surface-container-low"
+                className="border border-border-subtle p-6 flex flex-col items-center justify-center gap-3 bg-bg-canvas hover:bg-surface-container-low hover:border-accent rounded-xl transition-colors duration-300"
               >
                 <Icon name={tech.icon} size="36px" className="text-on-surface-variant" />
                 <span className="text-sm font-medium text-on-surface">{tech.label}</span>
