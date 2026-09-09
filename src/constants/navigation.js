@@ -7,14 +7,23 @@ export const NAVIGATION_ITEMS = [
   { label: "Contacto", path: "/contact", id: "contact" },
 ];
 
+const GITHUB_URL = "https://github.com/El-Jesule";
+const LINKEDIN_URL = "https://www.linkedin.com/in/jesus-gon-gom";
+const EMAIL_URL = "mailto:gonzalezgomezjesus16061997@gmail.com";
+
 export const SOCIAL_LINKS = [
-  { label: "GitHub", href: "https://github.com/El-Jesule", id: "github" },
-  { label: "LinkedIn", href: "www.linkedin.com/in/jesús-gon-góm", id: "linkedin" },
-  { label: "Email", href: "mailto:gonzalezgomezjesús16061997@gmail.com", id: "email" },
+  { label: "GitHub", href: GITHUB_URL, id: "github" },
+  { label: "LinkedIn", href: LINKEDIN_URL, id: "linkedin" },
+  { label: "Email", href: EMAIL_URL, id: "email" },
+];
+
+export const CONTACT_LINKS = [
+  { icon: "code", label: "GitHub", href: GITHUB_URL },
+  { icon: "work", label: "LinkedIn", href: LINKEDIN_URL },
+  { icon: "mail", label: "Mail", href: EMAIL_URL },
 ];
 
 export const SITE_META = {
   ownerName: "Jesús González Gómez",
-  role: "Full-Stack Developer",
   copyright: "© 2026 Jesús - Full-Stack Developer",
 };
