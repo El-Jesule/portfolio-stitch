@@ -1,10 +1,10 @@
 const VARIANT_STYLES = {
   primary:
-    "bg-[#6366f1] text-white hover:bg-[#4f46e5] hover:shadow-[0_0_15px_rgba(99,102,241,0.2)] border border-transparent",
+    "bg-accent text-white hover:bg-accent-hover hover:shadow-[0_0_15px_rgba(99,102,241,0.2)] light:hover:shadow-none border border-transparent",
   secondary:
-    "bg-transparent border border-[#27272a] text-white hover:border-[#6366f1] hover:text-[#c0c1ff]",
+    "bg-transparent border border-border-subtle text-on-surface hover:border-accent hover:text-primary",
   ghost:
-    "bg-transparent border border-transparent text-white hover:border-[#27272a]",
+    "bg-transparent border border-transparent text-on-surface hover:border-border-subtle",
 };
 
 const SIZE_STYLES = {
