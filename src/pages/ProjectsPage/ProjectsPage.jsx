@@ -18,8 +18,8 @@ export function ProjectsPage() {
   return (
     <div className="flex flex-col gap-16">
       <header>
-        <h1 className="text-4xl md:text-5xl font-bold text-[#e4e1e5] mb-6">Proyectos</h1>
-        <p className="text-lg leading-6 text-[#c7c4d7] max-w-2xl">
+        <h1 className="text-4xl md:text-5xl font-bold text-on-surface mb-6">Proyectos</h1>
+        <p className="text-lg leading-6 text-on-surface-variant max-w-2xl">
           Una selección de trabajos recientes enfocados en desarrollo full-stack, arquitecturas escalables
           y experiencias de usuario refinadas. Explorando tecnologías modernas para resolver problemas
           complejos.
@@ -39,9 +39,9 @@ export function ProjectsPage() {
 
       <ProjectsGrid projects={filteredProjects} />
 
-      <section className="border border-[#27272a] rounded-lg p-12 bg-[#161618] text-center max-w-3xl mx-auto w-full">
-        <h2 className="text-2xl font-semibold text-[#e4e1e5] mb-4">¿Interesado en colaborar?</h2>
-        <p className="text-base leading-6 text-[#c7c4d7] mb-8 max-w-lg mx-auto">
+      <section className="border border-border-subtle rounded-lg p-12 bg-surface-container-low text-center max-w-3xl mx-auto w-full shadow-theme-card">
+        <h2 className="text-2xl font-semibold text-on-surface mb-4">¿Interesado en colaborar?</h2>
+        <p className="text-base leading-6 text-on-surface-variant mb-8 max-w-lg mx-auto">
           Siempre estoy abierto a discutir nuevos proyectos, ideas de arquitectura de software u
           oportunidades para crear soluciones técnicas robustas.
         </p>
