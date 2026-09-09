@@ -192,7 +192,6 @@ export const PROJECT_DETAILS = {
   },
 };
 
-// Fallback for unknown projectId (e.g. direct access with invalid slug).
 export const FALLBACK_PROJECT_DETAIL = PROJECT_DETAILS["rutas-deportivas"];
 
 export const PROJECT_CATEGORIES = [

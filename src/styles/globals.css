@@ -26,8 +26,6 @@
   --font-code: "JetBrains Mono", monospace;
 }
 
-/* Light mode — Paper Studio: same structure, inverted luminance.
-   Keeps indigo accent, 1px borders, radii and typography. */
 html.light {
   --color-surface: #ffffff;
   --color-surface-low: #ffffff;
@@ -76,7 +74,6 @@ body {
     "opsz" 24;
 }
 
-/* Smooth theme switch for top-level surfaces only */
 body,
 header,
 footer,
@@ -86,7 +83,6 @@ main {
     border-color 0.3s ease;
 }
 
-/* In light mode white cards over gray canvas need minimal elevation */
 html.light .shadow-theme-card {
   box-shadow:
     0 1px 2px rgba(23, 23, 28, 0.05),
