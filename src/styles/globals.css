@@ -2,6 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap");
 @import "tailwindcss";
 
+@custom-variant light (&:where(.light, .light *));
+
 @theme {
   --color-background: #131316;
   --color-surface: #131316;
@@ -28,6 +30,30 @@
   --font-code: "JetBrains Mono", monospace;
 }
 
+/* Modo claro — Paper Studio: misma estructura, luminancia invertida.
+   Mantiene acento indigo, bordes 1px, radii y tipografías. */
+html.light {
+  --color-background: #ffffff;
+  --color-surface: #ffffff;
+  --color-surface-low: #ffffff;
+  --color-surface-container: #ffffff;
+  --color-surface-container-high: #edeef3;
+  --color-surface-container-low: #ffffff;
+  --color-surface-bright: #e6e6eb;
+  --color-on-surface: #17171c;
+  --color-on-surface-variant: #52525e;
+  --color-outline: #6e6d7e;
+  --color-outline-variant: #d9d9e0;
+  --color-primary: #4338ca;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #eeedff;
+  --color-inverse-primary: #4f46e5;
+  --color-accent: #6366f1;
+  --color-accent-hover: #4f46e5;
+  --color-border-subtle: #e6e6eb;
+  --color-bg-canvas: #f6f7f9;
+}
+
 * {
   scrollbar-width: thin;
   scrollbar-color: var(--color-outline-variant) transparent;
@@ -39,11 +65,15 @@ html {
 
 body {
   margin: 0;
-  background-color: #0a0a0c;
-  color: #e4e1e5;
+  background-color: var(--color-bg-canvas);
+  color: var(--color-on-surface);
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .material-symbols-outlined {
@@ -52,4 +82,27 @@ body {
     "wght" 400,
     "GRAD" 0,
     "opsz" 24;
+}
+
+/* Transición suave al cambiar de tema sin romper tus duration-300 existentes */
+header,
+footer,
+section,
+article,
+div,
+nav,
+input,
+textarea,
+button,
+a {
+  transition-property: background-color, border-color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+
+/* En claro las cards blancas sobre canvas gris necesitan elevación mínima */
+html.light .shadow-theme-card {
+  box-shadow:
+    0 1px 2px rgba(23, 23, 28, 0.05),
+    0 8px 24px -16px rgba(23, 23, 28, 0.18);
 }
