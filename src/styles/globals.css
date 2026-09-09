@@ -5,20 +5,16 @@
 @custom-variant light (&:where(.light, .light *));
 
 @theme {
-  --color-background: #131316;
   --color-surface: #131316;
   --color-surface-low: #1b1b1e;
   --color-surface-container: #1f1f22;
   --color-surface-container-high: #2a2a2d;
   --color-surface-container-low: #161618;
-  --color-surface-bright: #39393c;
   --color-on-surface: #e4e1e5;
   --color-on-surface-variant: #c7c4d7;
   --color-outline: #908fa0;
   --color-outline-variant: #464554;
   --color-primary: #c0c1ff;
-  --color-on-primary: #1000a9;
-  --color-primary-container: #8083ff;
   --color-inverse-primary: #494bd6;
   --color-accent: #6366f1;
   --color-accent-hover: #4f46e5;
@@ -30,23 +26,19 @@
   --font-code: "JetBrains Mono", monospace;
 }
 
-/* Modo claro — Paper Studio: misma estructura, luminancia invertida.
-   Mantiene acento indigo, bordes 1px, radii y tipografías. */
+/* Light mode — Paper Studio: same structure, inverted luminance.
+   Keeps indigo accent, 1px borders, radii and typography. */
 html.light {
-  --color-background: #ffffff;
   --color-surface: #ffffff;
   --color-surface-low: #ffffff;
   --color-surface-container: #ffffff;
   --color-surface-container-high: #edeef3;
   --color-surface-container-low: #ffffff;
-  --color-surface-bright: #e6e6eb;
   --color-on-surface: #17171c;
   --color-on-surface-variant: #52525e;
   --color-outline: #6e6d7e;
   --color-outline-variant: #d9d9e0;
   --color-primary: #4338ca;
-  --color-on-primary: #ffffff;
-  --color-primary-container: #eeedff;
   --color-inverse-primary: #4f46e5;
   --color-accent: #6366f1;
   --color-accent-hover: #4f46e5;
@@ -84,23 +76,17 @@ body {
     "opsz" 24;
 }
 
-/* Transición suave al cambiar de tema sin romper tus duration-300 existentes */
+/* Smooth theme switch for top-level surfaces only */
+body,
 header,
 footer,
-section,
-article,
-div,
-nav,
-input,
-textarea,
-button,
-a {
-  transition-property: background-color, border-color;
-  transition-duration: 0.3s;
-  transition-timing-function: ease;
+main {
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease;
 }
 
-/* En claro las cards blancas sobre canvas gris necesitan elevación mínima */
+/* In light mode white cards over gray canvas need minimal elevation */
 html.light .shadow-theme-card {
   box-shadow:
     0 1px 2px rgba(23, 23, 28, 0.05),
