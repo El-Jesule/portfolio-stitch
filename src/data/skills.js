@@ -17,7 +17,7 @@ export const SKILL_CATEGORIES = [
     icon: "terminal",
     skills: [
       { label: "PHP", highlighted: true },
-      { label: "Laravel", highlighted: true },
+      { label: "Laravel", highlighted: false },
       { label: "Python", highlighted: true },
       { label: "FastAPI", highlighted: true },
     ],
@@ -30,7 +30,7 @@ export const SKILL_CATEGORIES = [
     skills: [
       { label: "MySQL", highlighted: true },
       { label: "PostgreSQL", highlighted: true },
-      { label: "SQL", highlighted: true },
+      { label: "SQL", highlighted: false },
     ],
     gridSpan: "lg:col-span-6",
   },
@@ -40,7 +40,7 @@ export const SKILL_CATEGORIES = [
     icon: "build",
     skills: [
       { label: "Git", highlighted: true },
-      { label: "Docker", highlighted: true },
+      { label: "Docker", highlighted: false },
     ],
     gridSpan: "lg:col-span-6",
   },

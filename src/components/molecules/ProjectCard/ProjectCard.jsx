@@ -27,7 +27,7 @@ export function ProjectCard({ project, variant = "featured" }) {
       <div className="p-5 flex flex-col flex-grow">
         <h3 className="text-[18px] font-semibold text-on-surface mb-2 font-display leading-tight">{project.title}</h3>
         <p className="text-[13px] leading-5 text-on-surface-variant mb-5 flex-grow line-clamp-6">
-          {project.shortDescription ?? project.description}
+          {project.description}
         </p>
 
         <div className="flex flex-wrap gap-2 mb-6">
@@ -40,13 +40,13 @@ export function ProjectCard({ project, variant = "featured" }) {
           <Button as={Link} to={`/projects/${project.id}`} size="sm" className="flex-1 text-center">
             Ver proyecto
           </Button>
-          {isDetailed && (
+          {isDetailed && project.githubUrl && (
             <Button
               variant="secondary"
               size="sm"
               className="flex-1"
               as="a"
-              href={project.githubUrl ?? "https://github.com"}
+              href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
             >

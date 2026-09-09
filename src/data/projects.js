@@ -2,10 +2,7 @@ export const PROJECTS = [
   {
     id: "rutas-deportivas",
     title: "RutasDeportivas",
-    shortTitle: "RutasDeportivas",
     description:
-      "Aplicación web para planificar y personalizar rutas deportivas sobre mapas interactivos. Calcula distancia, tiempo, calorías, pasos y desnivel según la actividad y el usuario. Incluye cuentas de usuario, rutas guardadas y datos meteorológicos en tiempo real.",
-    shortDescription:
       "Aplicación web para planificar y personalizar rutas deportivas sobre mapas interactivos. Calcula distancia, tiempo, calorías, pasos y desnivel según la actividad y el usuario. Incluye cuentas de usuario, rutas guardadas y datos meteorológicos en tiempo real.",
     image: "/images/projects/rutas-deportivas.png",
     alt: "Captura de RutasDeportivas: mapa de Madrid con panel de Configuración y Resultados",
@@ -18,10 +15,7 @@ export const PROJECTS = [
   {
     id: "okydoky",
     title: "OkyDoky",
-    shortTitle: "OkyDoky",
     description:
-      "Marketplace desarrollado con React que presenta un catálogo de productos consumido desde una API externa. Incluye filtrado por categorías, navegación multipágina, usuarios y contenido editorial de la marca. Cuenta con diseño responsive, gestión de estados asíncronos y arquitectura basada en componentes reutilizables.",
-    shortDescription:
       "Marketplace desarrollado con React que presenta un catálogo de productos consumido desde una API externa. Incluye filtrado por categorías, navegación multipágina, usuarios y contenido editorial de la marca. Cuenta con diseño responsive, gestión de estados asíncronos y arquitectura basada en componentes reutilizables.",
     image: "/images/projects/okydoky.png",
     alt: "Captura de OkyDoky: portada neón con OKYDOKY y sección Los 5 más exclusivos",
@@ -34,10 +28,7 @@ export const PROJECTS = [
   {
     id: "habitafactoria",
     title: "HabitaFactoría",
-    shortTitle: "HabitaFactoría",
     description:
-      "Portal web de alquiler de viviendas orientado a estudiantes en España. Permite explorar propiedades, consultar sus detalles y contactar con la agencia mediante una interfaz responsive. El proyecto incorpora React, Tailwind CSS, navegación dinámica y un sistema de datos semánticos.",
-    shortDescription:
       "Portal web de alquiler de viviendas orientado a estudiantes en España. Permite explorar propiedades, consultar sus detalles y contactar con la agencia mediante una interfaz responsive. El proyecto incorpora React, Tailwind CSS, navegación dinámica y un sistema de datos semánticos.",
     image: "/images/projects/habitafactoria.png",
     alt: "Captura de HabitaFactoría: hero azul con mano entregando llaves y texto Gastos Incluidos",
@@ -51,59 +42,56 @@ export const PROJECTS = [
 
 export const FEATURED_PROJECTS = PROJECTS.filter((project) => project.featured);
 
-export const PROJECT_DETAIL_MOCK = {
-  id: "rutas-deportivas",
-  title: "RutasDeportivas",
-  summary:
-    "Aplicación web para planificar y personalizar rutas deportivas sobre mapas interactivos. Calcula distancia, tiempo, calorías, pasos y desnivel según actividad y usuario.",
-  heroImage: "/images/projects/rutas-deportivas.png",
-  liveUrl: "https://rutas-deportivas.vercel.app/",
-  githubUrl: "https://github.com/El-Jesule/RutasDeportivas",
-  descriptionParagraphs: [
-    "RutasDeportivas es una aplicación web orientada a la planificación de actividades deportivas al aire libre. Permite crear rutas directamente sobre un mapa y obtener información detallada del recorrido.",
-    "El sistema calcula distancia, tiempo estimado, calorías, pasos y desnivel. También incorpora información meteorológica para los puntos de la ruta. Los usuarios pueden registrarse, gestionar su perfil y guardar sus rutas favoritas. La aplicación combina un frontend interactivo con una API REST y una base de datos. Se integraron diferentes servicios externos para mapas, rutas, geolocalización, elevación y meteorología. El proyecto fue desarrollado como Trabajo de Fin de Grado de Desarrollo de Aplicaciones Web.",
-  ],
-  problem:
-    "Planificar una ruta deportiva puede requerir consultar diferentes herramientas para conocer su recorrido, distancia, desnivel, duración y condiciones meteorológicas. Esta dispersión de información dificulta preparar una actividad de forma rápida y personalizada.",
-  solution:
-    "RutasDeportivas centraliza toda esta información en una única aplicación. El usuario puede diseñar el recorrido sobre el mapa y obtener automáticamente las principales estadísticas necesarias para valorar y preparar la actividad.",
-  timeline: [
-    {
-      label: "Análisis y definición de funcionalidades",
-      description: "Análisis de los requisitos y definición de las funcionalidades principales.",
-    },
-    {
-      label: "Arquitectura y mapas",
-      description: "Diseño de la arquitectura frontend/backend e integración de mapas y servicios externos.",
-    },
-    {
-      label: "Usuarios y cálculos",
-      description:
-        "Desarrollo del sistema de usuarios y persistencia de rutas, implementación de los cálculos y visualización de estadísticas.",
-    },
-    {
-      label: "Pruebas y UX",
-      description: "Pruebas y ajustes de la experiencia de usuario.",
-    },
-  ],
-  techStack: ["React", "TypeScript", "Node.js", "Express", "Prisma", "Leaflet"],
-  features: [
-    "Creación de rutas sobre mapas interactivos",
-    "Cálculo de distancia y tiempo estimado",
-    "Estimación de calorías y pasos",
-    "Perfil y análisis de elevación",
-    "Información meteorológica en tiempo real",
-    "Registro, autenticación y gestión de usuarios",
-    "Guardado y recuperación de rutas",
-    "Buscador de direcciones",
-    "Modo oscuro",
-    "Marcadores de ruta arrastrables",
-  ],
-  gallery: ["/images/projects/okydoky.png", "/images/projects/habitafactoria.png"],
-};
-
 export const PROJECT_DETAILS = {
-  "rutas-deportivas": PROJECT_DETAIL_MOCK,
+  "rutas-deportivas": {
+    id: "rutas-deportivas",
+    title: "RutasDeportivas",
+    summary:
+      "Aplicación web para planificar y personalizar rutas deportivas sobre mapas interactivos. Calcula distancia, tiempo, calorías, pasos y desnivel según actividad y usuario.",
+    heroImage: "/images/projects/rutas-deportivas.png",
+    liveUrl: "https://rutas-deportivas.vercel.app/",
+    githubUrl: "https://github.com/El-Jesule/RutasDeportivas",
+    descriptionParagraphs: [
+      "RutasDeportivas es una aplicación web orientada a la planificación de actividades deportivas al aire libre. Permite crear rutas directamente sobre un mapa y obtener información detallada del recorrido.",
+      "El sistema calcula distancia, tiempo estimado, calorías, pasos y desnivel. También incorpora información meteorológica para los puntos de la ruta. Los usuarios pueden registrarse, gestionar su perfil y guardar sus rutas favoritas. La aplicación combina un frontend interactivo con una API REST y una base de datos. Se integraron diferentes servicios externos para mapas, rutas, geolocalización, elevación y meteorología. El proyecto fue desarrollado como Trabajo de Fin de Grado de Desarrollo de Aplicaciones Web.",
+    ],
+    problem:
+      "Planificar una ruta deportiva puede requerir consultar diferentes herramientas para conocer su recorrido, distancia, desnivel, duración y condiciones meteorológicas. Esta dispersión de información dificulta preparar una actividad de forma rápida y personalizada.",
+    solution:
+      "RutasDeportivas centraliza toda esta información en una única aplicación. El usuario puede diseñar el recorrido sobre el mapa y obtener automáticamente las principales estadísticas necesarias para valorar y preparar la actividad.",
+    timeline: [
+      {
+        label: "Análisis y definición de funcionalidades",
+        description: "Análisis de los requisitos y definición de las funcionalidades principales.",
+      },
+      {
+        label: "Arquitectura y mapas",
+        description: "Diseño de la arquitectura frontend/backend e integración de mapas y servicios externos.",
+      },
+      {
+        label: "Usuarios y cálculos",
+        description:
+          "Desarrollo del sistema de usuarios y persistencia de rutas, implementación de los cálculos y visualización de estadísticas.",
+      },
+      {
+        label: "Pruebas y UX",
+        description: "Pruebas y ajustes de la experiencia de usuario.",
+      },
+    ],
+    techStack: ["React", "TypeScript", "Node.js", "Express", "Prisma", "Leaflet"],
+    features: [
+      "Creación de rutas sobre mapas interactivos",
+      "Cálculo de distancia y tiempo estimado",
+      "Estimación de calorías y pasos",
+      "Perfil y análisis de elevación",
+      "Información meteorológica en tiempo real",
+      "Registro, autenticación y gestión de usuarios",
+      "Guardado y recuperación de rutas",
+      "Buscador de direcciones",
+      "Modo oscuro",
+      "Marcadores de ruta arrastrables",
+    ],
+  },
   okydoky: {
     id: "okydoky",
     title: "OkyDoky",
@@ -152,7 +140,6 @@ export const PROJECT_DETAILS = {
       "Diseño responsive",
       "Tests unitarios y de integración",
     ],
-    gallery: ["/images/projects/rutas-deportivas.png", "/images/projects/habitafactoria.png"],
   },
   habitafactoria: {
     id: "habitafactoria",
@@ -202,14 +189,16 @@ export const PROJECT_DETAILS = {
       "Estados de carga, error y vacío",
       "Sistema de diseño mediante tokens",
     ],
-    gallery: ["/images/projects/rutas-deportivas.png", "/images/projects/okydoky.png"],
   },
 };
+
+// Fallback for unknown projectId (e.g. direct access with invalid slug).
+export const FALLBACK_PROJECT_DETAIL = PROJECT_DETAILS["rutas-deportivas"];
 
 export const PROJECT_CATEGORIES = [
   { label: "Todos", value: "all" },
   { label: "React", value: "react" },
   { label: "Node.js", value: "node" },
-  { label: "Python", value: "python" },
+  { label: "TypeScript", value: "typescript" },
   { label: "Tailwind", value: "tailwind" },
 ];
