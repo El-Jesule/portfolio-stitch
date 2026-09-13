@@ -7,7 +7,7 @@ import { Textarea } from "../../atoms/Textarea/Textarea.jsx";
 import { Icon } from "../../atoms/Icon/Icon.jsx";
 
 export function ContactForm() {
-  const { formData, status, isSubmitting, isSuccess, handleChange, handleSubmit } =
+  const { formData, status, isSubmitting, isSuccess, isError, handleChange, handleSubmit } =
     useContactForm();
 
   return (
@@ -84,11 +84,21 @@ export function ContactForm() {
             />
 
             <div className="pt-4 flex items-center justify-between">
-              <span className="font-mono text-xs text-on-surface-variant opacity-50">{status}</span>
+              <span
+                className={`font-mono text-xs opacity-50 ${isError ? "text-red-400" : "text-on-surface-variant"}`}
+              >
+                {status}
+              </span>
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                className={isSuccess ? "bg-emerald-600 hover:bg-emerald-700 border-emerald-600" : ""}
+                className={
+                  isSuccess
+                    ? "bg-emerald-600 hover:bg-emerald-700 border-emerald-600"
+                    : isError
+                      ? "bg-red-600 hover:bg-red-700 border-red-600"
+                      : ""
+                }
               >
                 {isSubmitting ? "Enviando..." : isSuccess ? "Mensaje enviado" : "Enviar mensaje"}
               </Button>
